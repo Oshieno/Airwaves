@@ -11,6 +11,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
+import net.minecraft.world.level.material.PushReaction;
 import net.minecraft.world.level.storage.loot.LootParams;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParams;
 import org.jetbrains.annotations.Nullable;
@@ -45,7 +46,6 @@ public abstract class MultiblockBlock<P extends Enum<P> & StringRepresentable> e
 
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-        super.createBlockStateDefinition(builder);
         builder.add(getPartProperty());
     }
 
@@ -112,5 +112,11 @@ public abstract class MultiblockBlock<P extends Enum<P> & StringRepresentable> e
             return List.of();
         }
         return super.getDrops(state, params);
+    }
+
+    @Override
+    public @Nullable PushReaction getPistonPushReaction(BlockState state) {
+    //TODO: get the block to drop
+        return PushReaction.DESTROY;
     }
 }
