@@ -38,7 +38,6 @@ public class Airwaves {
         AirwaveAntennaTypes.init();
         AirwaveLang.init();
         AirwaveMenuTypes.MENU.register(modEventBus);
-
         AirwaveDataComponent.DATA_COMPONENTS.register(modEventBus);
     }
 
