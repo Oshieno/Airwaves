@@ -2,11 +2,7 @@ package dev.radioheads.airwaves.registry;
 
 import dev.radioheads.airwaves.Airwaves;
 import dev.radioheads.airwaves.api.radio.Modulation;
-import dev.radioheads.airwaves.api.registry.AirwaveRegistries;
-import dev.radioheads.airwaves.api.registry.builders.ModulationBuilder;
 import dev.radioheads.airwaves.api.registry.modulation.ModulationEntry;
-import net.neoforged.neoforge.registries.DeferredHolder;
-import net.neoforged.neoforge.registries.DeferredRegister;
 
 public final class AirwaveModulations {
     private AirwaveModulations() {}

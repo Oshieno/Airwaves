@@ -8,7 +8,6 @@ import net.minecraft.core.Holder;
 import net.minecraft.resources.RegistryFixedCodec;
 import net.minecraft.resources.ResourceLocation;
 
-import java.util.List;
 import java.util.Locale;
 import java.util.Optional;
 
