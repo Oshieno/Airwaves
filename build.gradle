@@ -9,7 +9,12 @@ tasks.named('wrapper', Wrapper).configure {
     distributionType = Wrapper.DistributionType.BIN
 }
 
-version = mod_version
+def ci = System.getenv("CI") != null && System.getenv("CI").toBoolean()
+def release = System.getenv("RELEASE") != null && System.getenv("RELEASE").toBoolean()
+def webhook = ci && !release
+def buildNumber = System.getenv("MOD_BUILD_NUMBER")
+
+version = "${minecraft_version}-${mod_version}${webhook ? "-build.${buildNumber}" : ''}"
 group = mod_group_id
 
 sourceSets.main.resources {
@@ -112,6 +117,7 @@ dependencies {
 
     runtimeOnly "maven.modrinth:9eGKb6K1:neoforge-1.21.1-${voicechat_api_version}"
 }
+
 var generateModMetadata = tasks.register("generateModMetadata", ProcessResources) {
     var replaceProperties = [
             minecraft_version      : minecraft_version,
@@ -131,6 +137,7 @@ var generateModMetadata = tasks.register("generateModMetadata", ProcessResources
     from "src/main/templates"
     into "build/generated/sources/modMetadata"
 }
+
 sourceSets.main.resources.srcDir generateModMetadata
 neoForge.ideSyncTask generateModMetadata
 
@@ -148,7 +155,7 @@ publishing {
 }
 
 tasks.withType(JavaCompile).configureEach {
-    options.encoding = 'UTF-8' 
+    options.encoding = 'UTF-8'
 }
 
 idea {
