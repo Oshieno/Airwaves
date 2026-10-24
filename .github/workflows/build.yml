@@ -2,7 +2,7 @@ name: Build
 
 on:
   push:
-    branches: ["1.21.1"]
+    branches: ["master"]
     paths:
       - 'src/**'
       - 'build.gradle.kts'
