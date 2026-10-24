@@ -74,12 +74,18 @@ public final class AirwaveLang extends Lang {
 
         add("container.tuning_table", "Tuning Table");
 
+        addBasic("creative_tab.airwave_main", "Airwaves");
+
         List<String> tiers = List.of("low_power", "mid_power", "high_power", "max_power", "creative");
 
         tiers.forEach(tier -> add("tier." + tier, snakeCaseToTitleCase(tier)));
     }
 
     private static void add(String key, String value) {
-        lang.add(new Pair<>("airwaves." + key, value));
+        addBasic(Airwaves.MOD_ID + "." + key, value);
+    }
+
+    private static void addBasic(String key, String value) {
+        lang.add(new Pair<>(key, value));
     }
 }

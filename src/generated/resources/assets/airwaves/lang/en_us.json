@@ -15,5 +15,6 @@
   "airwaves.tier.low_power": "Low-Power",
   "airwaves.tier.max_power": "Max-Power",
   "airwaves.tier.mid_power": "Mid-Power",
-  "block.airwaves.tuning_table": "Tuning Table"
+  "block.airwaves.tuning_table": "Tuning Table",
+  "creative_tab.airwave_main": "Airwaves"
 }

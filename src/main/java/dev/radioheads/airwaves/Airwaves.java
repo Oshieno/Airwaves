@@ -37,6 +37,7 @@ public class Airwaves {
         AirwaveLang.init();
         AirwaveMenuTypes.MENU.register(modEventBus);
         AirwaveDataComponent.DATA_COMPONENTS.register(modEventBus);
+        AirwaveCreativeTabs.CREATIVE_TABS.register(modEventBus);
     }
 
     @Contract("_ -> new")
