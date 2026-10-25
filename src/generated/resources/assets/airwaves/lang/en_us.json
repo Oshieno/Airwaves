@@ -17,6 +17,6 @@
   "airwaves.tier.mid_power": "Mid-Power",
   "block.airwaves.tuning_table": "Tuning Table",
   "creative_tab.airwave_main": "Airwaves",
-  "item.airwaves.amethyst_oscillator": "Amethyst Oscillator",
+  "item.airwaves.crystal_oscillator": "Crystal Oscillator",
   "item.airwaves.cut_amethyst": "Cut Amethyst"
 }

@@ -14,7 +14,7 @@ public final class AirwaveItems {
                 .tag(Tags.Items.GEMS_AMETHYST)
                 .register(),
 
-        AMETHYST_OSCILLATOR = Airwaves.REGISTRATE.item("amethyst_oscillator", Item::new)
+        CRYSTAL_OSCILLATOR = Airwaves.REGISTRATE.item("crystal_oscillator", Item::new)
                 .register()
     ;
 
