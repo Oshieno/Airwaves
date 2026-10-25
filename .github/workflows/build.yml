@@ -1,5 +1,6 @@
 name: Build
 
+
 on:
   push:
     branches: ["master"]
@@ -8,6 +9,7 @@ on:
       - 'build.gradle'
       - 'gradle.properties'
       - 'gradle/**'
+  workflow_dispatch:
 
 jobs:
   build:
