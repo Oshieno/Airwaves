@@ -63,3 +63,10 @@ config="${mod_id}.mixins.json"
     versionRange="[${sable_version},)"
     ordering="NONE"
     side="BOTH"
+
+[[dependencies.${mod_id}]]
+    modId="jei"
+    type="optional"
+    versionRange="[${jei_version},)"
+    ordering="NONE"
+    side="BOTH"
