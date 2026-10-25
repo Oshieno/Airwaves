@@ -12,7 +12,11 @@ public final class AirwaveItems {
     POLISHED_AMETHYST = Airwaves.REGISTRATE.item("polished_amethyst", Item::new)
             .tag(Tags.Items.GEMS)
             .tag(Tags.Items.GEMS_AMETHYST)
-            .register();
+            .register(),
+
+    AMETHYST_OSCILLATOR = Airwaves.REGISTRATE.item("amethyst_oscillator", Item::new)
+            .register()
+    ;
 
     public static void init() {}
 }
