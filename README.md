@@ -11,3 +11,11 @@ What this aims to change:
 - Dropping the Sable dependency (support will be added, just not required)
 
   We shall make it better!
+
+# Credits
+People on the dev team!!
+This mod would have not been made as best as it would have been without these people:
+
+Artists <br>
+- Ball
+- Oshieno
