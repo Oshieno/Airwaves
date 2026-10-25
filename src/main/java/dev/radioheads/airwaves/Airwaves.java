@@ -4,6 +4,7 @@ import com.mojang.logging.LogUtils;
 import com.simibubi.create.foundation.item.ItemDescription;
 import com.simibubi.create.foundation.item.KineticStats;
 import com.simibubi.create.foundation.item.TooltipModifier;
+import dev.radioheads.airwaves.integration.IntegrationLoader;
 import dev.radioheads.airwaves.registry.*;
 import net.createmod.catnip.lang.FontHelper;
 import net.minecraft.resources.ResourceLocation;
@@ -38,6 +39,8 @@ public class Airwaves {
         AirwaveMenuTypes.MENU.register(modEventBus);
         AirwaveDataComponent.DATA_COMPONENTS.register(modEventBus);
         AirwaveCreativeTabs.CREATIVE_TABS.register(modEventBus);
+
+        IntegrationLoader.init(modEventBus);
     }
 
     @Contract("_ -> new")
