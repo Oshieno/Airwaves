@@ -9,13 +9,13 @@ public final class AirwaveItems {
     private AirwaveItems() {}
 
     public static final ItemEntry<Item>
-    POLISHED_AMETHYST = Airwaves.REGISTRATE.item("polished_amethyst", Item::new)
-            .tag(Tags.Items.GEMS)
-            .tag(Tags.Items.GEMS_AMETHYST)
-            .register(),
+            CUT_AMETHYST = Airwaves.REGISTRATE.item("cut_amethyst", Item::new)
+                .tag(Tags.Items.GEMS)
+                .tag(Tags.Items.GEMS_AMETHYST)
+                .register(),
 
-    AMETHYST_OSCILLATOR = Airwaves.REGISTRATE.item("amethyst_oscillator", Item::new)
-            .register()
+        AMETHYST_OSCILLATOR = Airwaves.REGISTRATE.item("amethyst_oscillator", Item::new)
+                .register()
     ;
 
     public static void init() {}

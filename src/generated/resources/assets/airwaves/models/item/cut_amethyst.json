@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "airwaves:item/polished_amethyst"
+    "layer0": "airwaves:item/cut_amethyst"
   }
 }

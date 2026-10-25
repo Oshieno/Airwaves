@@ -14,8 +14,8 @@ public class SandpaperRecipeGen extends PolishingRecipeGen {
         super(output, registries, Airwaves.MOD_ID);
     }
 
-    GeneratedRecipe POLISHED_AMETHYST = create("polished_amethyst", b -> b
+    GeneratedRecipe CUT_AMETHYST = create("cut_amethyst", b -> b
             .require(Items.AMETHYST_SHARD)
-            .output(AirwaveItems.POLISHED_AMETHYST)
+            .output(AirwaveItems.CUT_AMETHYST)
     );
 }
