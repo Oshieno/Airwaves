@@ -1,12 +1,26 @@
 package dev.radioheads.airwaves.registry;
 
+import com.simibubi.create.foundation.data.TagGen;
+import com.simibubi.create.foundation.data.recipe.CommonMetal;
 import com.tterrag.registrate.util.entry.BlockEntry;
 import dev.radioheads.airwaves.Airwaves;
 import dev.radioheads.airwaves.content.block.TuningTableBlock;
 import net.minecraft.core.Direction;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.world.item.enchantment.Enchantment;
+import net.minecraft.world.item.enchantment.Enchantments;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.material.MapColor;
+import net.minecraft.world.level.storage.loot.entries.LootItem;
+import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
 import net.neoforged.neoforge.client.model.generators.ConfiguredModel;
+import net.neoforged.neoforge.common.Tags;
+
+import java.util.Map;
 
 public final class AirwaveBlocks {
     private AirwaveBlocks() {}
@@ -36,6 +50,31 @@ public final class AirwaveBlocks {
                     .model((ctx, prov) -> prov.withExistingParent(ctx.getName(), prov.modLoc("block/tuning_table/center")))
                     .build()
                     .register();
+
+    public static final BlockEntry<Block>
+        SILVER_ORE = Airwaves.REGISTRATE.block("silver_ore", Block::new)
+            .initialProperties(() -> Blocks.GOLD_ORE)
+            .properties(p -> p
+                    .requiresCorrectToolForDrops()
+                    .sound(SoundType.STONE))
+            .transform(TagGen.pickaxeOnly())
+            .loot((lt, b) -> {
+                HolderLookup.RegistryLookup<Enchantment> registryLookup = lt.getRegistries().lookupOrThrow(Registries.ENCHANTMENT);
+                lt.add(b,
+                        lt.createSilkTouchDispatchTable(b,
+                                lt.applyExplosionDecay(b, LootItem.lootTableItem(AirwaveItems.RAW_SILVER.get())
+                                        .apply(ApplyBonusCount.addOreBonusCount(registryLookup.getOrThrow(Enchantments.FORTUNE))))
+                        )
+                );
+            })
+            .tag(BlockTags.NEEDS_IRON_TOOL)
+            .transform(TagGen.tagBlockAndItem(Map.of(
+                    Tags.Blocks.ORES, Tags.Items.ORES,
+                    CommonMetal.SILVER.ores.blocks(), CommonMetal.SILVER.ores.items(),
+                    Tags.Blocks.ORES_IN_GROUND_STONE, Tags.Items.ORES_IN_GROUND_STONE
+            )))
+            .build()
+            .register();
 
     public static void init() {}
 }
