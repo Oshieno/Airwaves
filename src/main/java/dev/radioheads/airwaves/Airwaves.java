@@ -37,7 +37,7 @@ public class Airwaves {
         AirwaveAntennaTypes.init();
         AirwaveLang.init();
         AirwaveMenuTypes.MENU.register(modEventBus);
-        AirwaveDataComponent.DATA_COMPONENTS.register(modEventBus);
+        AirwaveDataComponents.DATA_COMPONENTS.register(modEventBus);
         AirwaveCreativeTabs.CREATIVE_TABS.register(modEventBus);
 
         IntegrationLoader.init(modEventBus);
