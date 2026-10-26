@@ -11,6 +11,7 @@ import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 
+import static dev.radioheads.airwaves.registry.AirwaveTags.NameSpace.COMMON;
 import static dev.radioheads.airwaves.registry.AirwaveTags.NameSpace.MOD;
 
 public final class AirwaveTags {
@@ -74,7 +75,11 @@ public final class AirwaveTags {
     }
 
     public enum Items {
-        PLACEHOLDER;
+        RAW_MATERIALS_SILVER(COMMON, "raw_materials/silver"),
+
+        INGOTS_SILVER(COMMON, "ingots/silver"),
+        NUGGETS_SILVER(COMMON, "nuggets/silver"),
+        ;
 
         public final TagKey<Item> tag;
 
