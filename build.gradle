@@ -30,6 +30,8 @@ repositories {
     maven { url = "https://maven.ryanhcode.dev/releases" }
     maven { url = 'https://maven.maxhenkel.de/repository/public' }
     maven { url = "https://maven.blamejared.com/" }
+    maven { url = "https://krystalsmaven.oreostack.uk/releases" }
+    maven { url = "https://pkgs.dev.azure.com/djtheredstoner/DevAuth/_packaging/public/maven/v1"}
 
     exclusiveContent {
         forRepository {
@@ -124,6 +126,9 @@ dependencies {
 
     compileOnly("mezz.jei:jei-${minecraft_version}-neoforge-api:${jei_version}")
     localRuntime("mezz.jei:jei-${minecraft_version}-neoforge:${jei_version}")
+
+    //localRuntime("dev.metallurgists:rutile:${minecraft_version}-${rutile_version}")
+    localRuntime("me.djtheredstoner:DevAuth-neoforge:1.2.1")
 }
 
 var generateModMetadata = tasks.register("generateModMetadata", ProcessResources) {
