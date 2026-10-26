@@ -9,8 +9,6 @@ import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.neoforged.neoforge.common.Tags;
 
-import java.util.function.Supplier;
-
 public final class AirwaveItems {
     private AirwaveItems() {}
 

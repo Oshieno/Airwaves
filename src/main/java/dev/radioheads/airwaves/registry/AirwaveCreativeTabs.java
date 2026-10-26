@@ -1,11 +1,8 @@
 package dev.radioheads.airwaves.registry;
 
 import com.simibubi.create.AllCreativeModeTabs;
-import com.simibubi.create.content.processing.sequenced.SequencedAssemblyItem;
-import com.simibubi.create.foundation.data.CreateRegistrate;
 import com.tterrag.registrate.util.entry.RegistryEntry;
 import dev.radioheads.airwaves.Airwaves;
-import dev.radioheads.airwaves.api.registry.AirwaveRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;

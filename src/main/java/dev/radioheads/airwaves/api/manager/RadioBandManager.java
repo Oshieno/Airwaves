@@ -1,14 +1,5 @@
 package dev.radioheads.airwaves.api.manager;
 
-import dev.radioheads.airwaves.api.radio.RadioBand;
-import net.minecraft.core.BlockPos;
-import net.minecraft.resources.ResourceKey;
-import net.minecraft.world.level.Level;
-
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
 //TODO
 // Pretty much store sources of radio bands in areas
 // So a block pos would know what bands are present there

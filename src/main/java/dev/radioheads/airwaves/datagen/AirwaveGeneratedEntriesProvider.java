@@ -1,7 +1,6 @@
 package dev.radioheads.airwaves.datagen;
 
 import dev.radioheads.airwaves.Airwaves;
-import dev.radioheads.airwaves.api.registry.AirwaveRegistries;
 import dev.radioheads.airwaves.registry.AirwaveBiomeModifiers;
 import dev.radioheads.airwaves.registry.AirwaveConfiguredFeatures;
 import dev.radioheads.airwaves.registry.AirwavePlacedFeatures;
