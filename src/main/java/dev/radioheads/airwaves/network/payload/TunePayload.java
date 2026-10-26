@@ -3,7 +3,7 @@ package dev.radioheads.airwaves.network.payload;
 import dev.radioheads.airwaves.Airwaves;
 import dev.radioheads.airwaves.api.radio.Tuning;
 import dev.radioheads.airwaves.content.menu.TuningTableMenu;
-import dev.radioheads.airwaves.registry.AirwaveDataComponent;
+import dev.radioheads.airwaves.registry.AirwaveDataComponents;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
@@ -36,7 +36,7 @@ public record TunePayload(Tuning tuning) implements CustomPacketPayload {
                     return;
                 }
 
-                stack.set(AirwaveDataComponent.TUNING, payload.tuning.copy());
+                stack.set(AirwaveDataComponents.TUNING, payload.tuning.copy());
                 menu.broadcastChanges();
             }
         }
