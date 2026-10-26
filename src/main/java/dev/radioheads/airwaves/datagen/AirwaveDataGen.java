@@ -17,5 +17,6 @@ public class AirwaveDataGen {
         var registries = event.getLookupProvider();
 
         event.addProvider(new SandpaperRecipeGen(output, registries));
+        event.addProvider(new AirwaveGeneratedEntriesProvider(output, registries));
     }
 }
