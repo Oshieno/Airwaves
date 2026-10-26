@@ -21,7 +21,7 @@ public final class AirwaveDataComponents {
     public static final DataComponentType<CapacitorData> CAPACITOR_DATA = register("capacitor", CapacitorData.CODEC, CapacitorData.STREAM_CODEC);
 
     public static final DataComponentType<Integer> FOIL_AMOUNT = registerNonNegativeInt("foil_amount");
-    public static final DataComponentType<Integer> COIL_AMOUNT = registerNonNegativeInt("coil_amount");
+    public static final DataComponentType<Integer> SPOOL_AMOUNT = registerNonNegativeInt("spool_amount");
 
     private static DataComponentType<Integer> registerNonNegativeInt(String name) {
         return register(name, ExtraCodecs.NON_NEGATIVE_INT, ByteBufCodecs.VAR_INT);

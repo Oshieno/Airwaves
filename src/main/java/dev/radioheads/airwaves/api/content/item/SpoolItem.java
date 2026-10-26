@@ -3,8 +3,8 @@ package dev.radioheads.airwaves.api.content.item;
 import net.minecraft.world.item.Item;
 
 //TODO
-public class CoilItem extends Item {
-    public CoilItem(Properties properties) {
+public class SpoolItem extends Item {
+    public SpoolItem(Properties properties) {
         super(properties);
     }
 }

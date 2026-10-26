@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "airwaves:item/empty_coil"
+    "layer0": "airwaves:item/empty_spool"
   }
 }

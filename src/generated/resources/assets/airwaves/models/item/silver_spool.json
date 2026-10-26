@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "airwaves:item/gold_coil"
+    "layer0": "airwaves:item/silver_spool"
   }
 }

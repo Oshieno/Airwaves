@@ -40,11 +40,11 @@ public final class AirwaveItems {
                     .register()
     ;
 
-    public static final ItemEntry<CoilItem>
-        EMPTY_COIL = registerCoil("empty"),
-        COPPER_COIL = registerCoil("copper"),
-        GOLD_COIL = registerCoil("gold"),
-        SILVER_COIL = registerCoil("silver");
+    public static final ItemEntry<SpoolItem>
+        EMPTY_COIL = registerSpool("empty"),
+        COPPER_COIL = registerSpool("copper"),
+        GOLD_COIL = registerSpool("gold"),
+        SILVER_COIL = registerSpool("silver");
 
     public static final ItemEntry<WireItem>
         COPPER_WIRE = registerWire("copper"),
@@ -60,9 +60,9 @@ public final class AirwaveItems {
         GOLD_FOIL = registerFoil("gold"),
         SILVER_FOIL = registerFoil("silver");
 
-    private static ItemEntry<CoilItem> registerCoil(String path) {
-        return Airwaves.REGISTRATE.item(path + "_coil", CoilItem::new)
-                .properties(p -> p.component(AirwaveDataComponents.COIL_AMOUNT, 100))
+    private static ItemEntry<SpoolItem> registerSpool(String path) {
+        return Airwaves.REGISTRATE.item(path + "_spool", SpoolItem::new)
+                .properties(p -> p.component(AirwaveDataComponents.SPOOL_AMOUNT, 100))
                 .register();
     }
 
