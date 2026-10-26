@@ -4,6 +4,7 @@ import com.simibubi.create.foundation.data.TagGen;
 import com.simibubi.create.foundation.data.recipe.CommonMetal;
 import com.tterrag.registrate.util.entry.BlockEntry;
 import dev.radioheads.airwaves.Airwaves;
+import dev.radioheads.airwaves.content.block.RadioBlock;
 import dev.radioheads.airwaves.content.block.TuningTableBlock;
 import net.minecraft.core.Direction;
 import net.minecraft.core.HolderLookup;
@@ -14,6 +15,7 @@ import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
@@ -73,6 +75,26 @@ public final class AirwaveBlocks {
                     CommonMetal.SILVER.ores.blocks(), CommonMetal.SILVER.ores.items(),
                     Tags.Blocks.ORES_IN_GROUND_STONE, Tags.Items.ORES_IN_GROUND_STONE
             )))
+            .build()
+            .register();
+
+    //TODO
+    public static final BlockEntry<RadioBlock>
+        RADIO = Airwaves.REGISTRATE.block("radio", RadioBlock::new)
+            .properties(BlockBehaviour.Properties::noOcclusion)
+            .blockstate((ctx, prov) ->  prov.getVariantBuilder(ctx.getEntry()).forAllStates(state -> {
+                Direction facing = state.getValue(RadioBlock.HORIZONTAL_FACING);
+
+                return new ConfiguredModel[] {
+                        new ConfiguredModel(
+                                prov.models().getExistingFile(prov.modLoc("block/radio")),
+                                0,
+                                facing.get2DDataValue() * 90,
+                                false
+                        )
+                };
+            }))
+            .item()
             .build()
             .register();
 
