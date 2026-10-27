@@ -118,7 +118,7 @@ dependencies {
     implementation("com.tterrag.registrate:Registrate:${registrate_version}")
 
     compileOnly("top.theillusivec4.curios:curios-neoforge:${curios_version}:api")
-    runtimeOnly("top.theillusivec4.curios:curios-neoforge:${curios_version}")
+    localRuntime("top.theillusivec4.curios:curios-neoforge:${curios_version}")
 
     implementation "de.maxhenkel.voicechat:voicechat-api:${voicechat_api_version}"
 
@@ -126,6 +126,10 @@ dependencies {
 
     compileOnly("mezz.jei:jei-${minecraft_version}-neoforge-api:${jei_version}")
     localRuntime("mezz.jei:jei-${minecraft_version}-neoforge:${jei_version}")
+
+    // CC: Tweaked Version 1.120.2
+    compileOnly("maven.modrinth:gu7yAYhd:1ewzHZYg")
+    localRuntime("maven.modrinth:gu7yAYhd:1ewzHZYg")
 
     //localRuntime("dev.metallurgists:rutile:${minecraft_version}-${rutile_version}")
     localRuntime("me.djtheredstoner:DevAuth-neoforge:1.2.1")
@@ -144,7 +148,8 @@ var generateModMetadata = tasks.register("generateModMetadata", ProcessResources
             curios_version         : curios_version,
             sable_version          : sable_version,
             svc_version            : voicechat_api_version,
-            jei_version            : jei_version
+            jei_version            : jei_version,
+            cc_tweaked_version     : cc_tweaked_version
     ]
     inputs.properties replaceProperties
     expand replaceProperties

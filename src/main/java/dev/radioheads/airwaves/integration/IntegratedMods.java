@@ -5,7 +5,8 @@ import net.neoforged.fml.loading.LoadingModList;
 import java.util.Locale;
 
 public enum IntegratedMods {
-    SABLE;
+    SABLE,
+    COMPUTER_CRAFT;
 
     public boolean isLoaded() {
         // English just in case
