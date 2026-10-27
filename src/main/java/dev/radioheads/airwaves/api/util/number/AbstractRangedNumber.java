@@ -1,4 +1,4 @@
-package dev.radioheads.airwaves.api.util;
+package dev.radioheads.airwaves.api.util.number;
 
 import java.util.Objects;
 

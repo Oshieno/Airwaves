@@ -1,4 +1,4 @@
-package dev.radioheads.airwaves.api.util;
+package dev.radioheads.airwaves.api.util.number;
 
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.DataResult;

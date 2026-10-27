@@ -3,7 +3,7 @@ package dev.radioheads.airwaves.network.payload;
 import dev.radioheads.airwaves.Airwaves;
 import dev.radioheads.airwaves.api.radio.Modulation;
 import dev.radioheads.airwaves.api.registry.AirwaveRegistries;
-import dev.radioheads.airwaves.api.util.RangedFloat;
+import dev.radioheads.airwaves.api.util.number.RangedFloat;
 import dev.radioheads.airwaves.network.RadioLinkStore;
 import net.minecraft.core.Holder;
 import net.minecraft.core.UUIDUtil;
