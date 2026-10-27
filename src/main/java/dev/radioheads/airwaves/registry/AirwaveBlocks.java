@@ -4,8 +4,10 @@ import com.simibubi.create.foundation.data.TagGen;
 import com.simibubi.create.foundation.data.recipe.CommonMetal;
 import com.tterrag.registrate.util.entry.BlockEntry;
 import dev.radioheads.airwaves.Airwaves;
+import dev.radioheads.airwaves.api.radio.Tuning;
 import dev.radioheads.airwaves.content.block.RadioBlock;
 import dev.radioheads.airwaves.content.block.TuningTableBlock;
+import dev.radioheads.airwaves.content.item.RadioItem;
 import net.minecraft.core.Direction;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
@@ -94,7 +96,8 @@ public final class AirwaveBlocks {
                         )
                 };
             }))
-            .item()
+            .item(RadioItem::new)
+            .properties(p -> p.component(AirwaveDataComponents.TUNING, Tuning.DEFAULT))
             .build()
             .register();
 
